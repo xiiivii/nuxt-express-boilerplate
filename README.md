@@ -40,11 +40,11 @@ $ npm run clean
 
 
 ## Организация проекта
-- [Файловая структура](wiki/folders-structure)
-- [Линтинг](wiki/linting)
-- [Vue](wiki/code-vue)
-- [SASS](wiki/code-sass)
-- [Git](wiki/git)
+- [Файловая структура](wiki/folders-structure.md)
+- [Линтинг](wiki/linting.md)
+- [Vue](wiki/code-vue.md)
+- [SASS](wiki/code-sass.md)
+- [Git](wiki/git.md)
 
 ## Документация
 - [Vue.js 2.x](https://vuejs.org/v2/guide/)
