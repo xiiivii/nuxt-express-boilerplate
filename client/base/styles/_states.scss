@@ -1,0 +1,87 @@
+//
+//  Description:
+//    Applies rules to $selectors
+//    only when focus was made by keyboard
+//    (see methods in /components/organisms/App/scripts.js)
+//
+//  Usage:
+//    For :focus state
+//
+
+@mixin state-focus ($selectors...)
+ {
+    @if length($selectors) == 0
+    {
+        $selectors: (&);
+    }
+
+    @each $selector in $selectors
+    {
+        @at-root .ga-app_focus_keyboard #{$selector}
+        {
+            @content;
+        }
+    }
+}
+
+
+//
+//  Description:
+//    Applies rules to $selectors
+//    depending on whether hover @media is supported by UA
+//    (see methods in /components/organisms/App/scripts.js)
+//
+//  Usage:
+//    For :hover and :active states
+//
+
+@mixin state-hover ($selectors...)
+ {
+    @if length($selectors) == 0
+    {
+        $selectors: (&);
+    }
+
+    @each $selector in $selectors
+    {
+        @media (hover: hover)
+        {
+            @at-root .ga-app_hover_supported #{$selector}
+            {
+                @content;
+            }
+        }
+
+        @at-root .ga-app_hover_unsupported #{$selector}
+        {
+            @content;
+        }
+    }
+}
+
+
+//
+//  Description:
+//    Applies rules to $selectors
+//    to level selectors specificity
+//
+//  Usage:
+//    For any other states when
+//    state-focus or state-hover was used
+//
+
+@mixin state-any ($selectors...)
+ {
+    @if length($selectors) == 0
+    {
+        $selectors: (&);
+    }
+
+    @each $selector in $selectors
+    {
+        @at-root .ga-app #{$selector}
+        {
+            @content;
+        }
+    }
+}

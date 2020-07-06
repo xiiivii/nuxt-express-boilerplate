@@ -1,0 +1,38 @@
+@import './_name';
+@import './_vars';
+
+
+#{$block}
+{
+    width: 200px;
+
+    border: 1px solid;
+
+    outline: none;
+
+    transition-timing-function: $transition-timing-function;
+    transition-duration: $transition-duration;
+
+
+    &::placeholder
+    {
+        color: $placeholder-color;
+    }
+
+
+    @include state-hover
+    {
+        &:hover
+        {
+            border-color: $border-color-hover;
+        }
+    }
+
+    @include state-focus
+    {
+        &:focus
+        {
+            border-color: $border-color-focus;
+        }
+    }
+}

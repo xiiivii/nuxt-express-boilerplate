@@ -1,0 +1,15 @@
+@import '../../../base/styles/_colors';
+@import '../../../base/styles/_states';
+
+
+$placeholder-color: get-color('foreground-30');
+
+
+$border: 1px solid;
+
+$border-color-hover: get-color('accent-primary');
+$border-color-focus: get-color('accent-secondary');
+
+
+$transition-duration: 100ms;
+$transition-timing-function: ease-in-out;

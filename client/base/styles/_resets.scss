@@ -1,0 +1,52 @@
+@mixin reset-input-base
+ {
+    appearance: none;
+
+    font: inherit;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+
+    background: none;
+
+    &:disabled
+    {
+        color: inherit;
+
+        opacity: 1;
+        -webkit-text-fill-color: inherit;
+    }
+
+    &:focus
+    {
+        outline: none;
+    }
+}
+
+@mixin reset-input
+ {
+    @include reset-input-base;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+    {
+        box-shadow: inset 0 0 0 100vw #fff;
+    }
+
+    &::-ms-clear,
+    &::-ms-reveal
+    {
+        display: none;
+    }
+}
+
+@mixin reset-textarea
+ {
+    @include reset-input-base;
+
+    resize: none;
+}

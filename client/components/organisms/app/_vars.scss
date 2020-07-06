@@ -1,0 +1,8 @@
+@import '../../../base/styles/_colors';
+@import '../../../base/styles/_states';
+
+
+$min-content-width: 320px;
+
+$selection-color: get-color('background');
+$selection-background: get-color('accent-primary');

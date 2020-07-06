@@ -1,0 +1,40 @@
+$colors: (
+    accent-primary   : #c6b09f,
+    accent-secondary : #ac8c75,
+
+    error            : #ff0042,
+    success          : #1cd344,
+
+    foreground       : #000,
+    foreground-70    : #4d4d4d,
+    foreground-50    : #7f7f7f,
+    foreground-30    : #b3b3b3,
+    foreground-20    : #ccc,
+    foreground-10    : #e6e6e6,
+    foreground-5     : #f2f2f2,
+    foreground-3     : #f3f3f3,
+
+    background       : #fff
+);
+
+@function get-color($key)
+ {
+    @return map-get($colors, $key);
+}
+
+
+$label-colors: (
+    new       : #9ade99,
+    online    : #ccef83,
+    prelaunch : #f4ff7a,
+    hit       : #a8cee9,
+    sale      : #d1c0b2,
+    exclusive : #d9cfff,
+    limited   : #bbb,
+    gift      : #ffc5cc
+);
+
+@function get-label-color($key)
+ {
+    @return map-get($label-colors, $key);
+}

@@ -1,0 +1,13 @@
+@import './_name';
+
+
+#{$block}
+{
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding: 20px;
+
+    background: #ddd;
+}

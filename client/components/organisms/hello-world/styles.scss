@@ -1,0 +1,66 @@
+@import './_name';
+
+
+#{$block}
+{
+    padding: 20px;
+
+
+    &__heading
+    {
+        text-align: center;
+
+        animation-name: #{$name}__heading-swivel;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+
+        backface-visibility: hidden;
+        will-change: transform;
+    }
+
+
+    &__button
+    {
+        display: block;
+
+        margin: 30px auto;
+    }
+
+
+    &__debug
+    {
+        position: fixed;
+
+        z-index: 999999;
+
+        top: 0;
+        left: 0;
+
+        width: 40ch;
+
+        margin: 0;
+        padding: 15px 10px;
+
+        color: #fff;
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+
+@keyframes #{$name}__heading-swivel
+ {
+    0%, 100%
+    {
+        transform: none;
+    }
+
+    33%
+    {
+        transform: translateX(-50px);
+    }
+
+    66%
+    {
+        transform: translateX(50px);
+    }
+}
