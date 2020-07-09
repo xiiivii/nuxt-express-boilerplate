@@ -180,7 +180,7 @@ export default {
 
                 this.hover = hoverMediaIsProbablySupported ? HOVER.SUPPORTED : HOVER.UNSUPPORTED;
             } catch (_) {
-                this.hover = HOVER.SUPPORTED;
+                this.hover = HOVER.UNSUPPORTED;
             }
         },
 
