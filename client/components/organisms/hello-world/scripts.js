@@ -4,9 +4,13 @@ import { bemCn } from '~/base/mixins';
 
 import { mapMutations, mapGetters } from 'vuex';
 
-
+// @vue/component
 export default {
     name: 'ga-hello-world',
+
+    components: {
+        GaButton
+    },
 
     mixins: [
         bemCn()
@@ -65,9 +69,5 @@ export default {
 
             return `${innerWidth}×${innerHeight}`;
         }
-    },
-
-    components: {
-        GaButton
     }
 };

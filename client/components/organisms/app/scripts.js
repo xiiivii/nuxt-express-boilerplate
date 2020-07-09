@@ -16,6 +16,7 @@ const HOVER = {
     UNSUPPORTED: 'unsupported'
 };
 
+// @vue/component
 export default {
     name: 'ga-app',
 
@@ -43,21 +44,14 @@ export default {
         };
     },
 
-    mounted() {
-        window.addEventListener('orientationchange', this.onResize);
-        window.addEventListener('resize', this.onResize);
-        window.addEventListener('scroll', this.onScroll);
+    computed: {
+        ...mapGetters('app', [
+            'getScrollFreezeState'
+        ]),
 
-
-        this.onResize();
-        this.onScroll();
-
-        this.initFocusSourceDetection();
-
-        this.setFocusSource();
-        this.setHoverSupport();
-
-        this.updateClasses();
+        scrollFreeze() {
+            return this.getScrollFreezeState();
+        }
     },
 
     watch: {
@@ -82,14 +76,21 @@ export default {
         }
     },
 
-    computed: {
-        ...mapGetters('app', [
-            'getScrollFreezeState'
-        ]),
+    mounted() {
+        window.addEventListener('orientationchange', this.onResize);
+        window.addEventListener('resize', this.onResize);
+        window.addEventListener('scroll', this.onScroll);
 
-        scrollFreeze() {
-            return this.getScrollFreezeState();
-        }
+
+        this.onResize();
+        this.onScroll();
+
+        this.initFocusSourceDetection();
+
+        this.setFocusSource();
+        this.setHoverSupport();
+
+        this.updateClasses();
     },
 
     methods: {

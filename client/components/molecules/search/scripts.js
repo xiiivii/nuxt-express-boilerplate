@@ -3,9 +3,14 @@ import GaInput from '~/components/atoms/input';
 
 import { bemCn } from '~/base/mixins';
 
-
+// @vue/component
 export default {
     name: 'ga-search',
+
+    components: {
+        GaButton,
+        GaInput
+    },
 
     mixins: [
         bemCn()
@@ -15,10 +20,5 @@ export default {
         return {
             search: ''
         };
-    },
-
-    components: {
-        GaButton,
-        GaInput
     }
 };
