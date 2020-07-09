@@ -62,8 +62,8 @@ $block: '.' + $name;
 
 _vars.scss
 ```scss
-@import '../../../base/styles/_colors';
-@import '../../../base/styles/_states';
+@import '~/base/styles/_colors';
+@import '~/base/styles/_states';
 
 
 $link-padding: 20px;
