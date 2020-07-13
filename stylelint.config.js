@@ -344,7 +344,12 @@ module.exports = {
         'comment-whitespace-inside': 'always',
 
         //  General / Sheet
-        'indentation': 4,
+        'indentation': [
+            4,
+            {
+                baseIndentLevel: 1
+            }
+        ],
         'linebreaks': 'unix',
         'max-empty-lines': 2,
         // 'max-line-length': false,
@@ -580,19 +585,12 @@ module.exports = {
                     ]
                 },
                 {
-                    groupName: 'flex-align',
+                    groupName: 'flex-align-and-justify',
                     noEmptyLineBetween: true,
                     emptyLineBefore: 'always',
                     properties: [
                         'align-content',
-                        'align-items'
-                    ]
-                },
-                {
-                    groupName: 'flex-justify',
-                    noEmptyLineBetween: true,
-                    emptyLineBefore: 'always',
-                    properties: [
+                        'align-items',
                         'justify-content',
                         'justify-items'
                     ]
