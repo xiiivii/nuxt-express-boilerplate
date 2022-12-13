@@ -28,7 +28,7 @@
   "dependencies": {
     "nuxt": "2.13.2",
     "cross-env": "7.0.2",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "@nuxtjs/axios": "5.11.0",
     "bem-cn-lite": "4.0.0"
   },
